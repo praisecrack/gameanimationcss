@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playing around with game animation</title>
+    <link rel="stylesheet" href="style.php.css">
+
+</head>
+<body>
+    <div class="group">
+    <div class="sky">
+        <img id="img1" src="cloud.png" alt="jpg">
+        <!-- <img id="img0" src="cloud.png" alt="jpg"> -->
+        <img id="img2" src="cloud.png" alt="jpg">
+        <div class="moon"></div>
+    </div>
+    <div class="grass">
+        <img id="grasses-two" src="grass two.png" alt="jpg">
+        <img id="grass-one" src="grass 1.png" alt="jpg">
+        <img id="grasses-three" src="grass two.png" alt="jpg">
+        <img id="grass22" src="grass 1.png" alt="jpg">
+        <img id="grasses-four" src="grass two.png" alt="jpg">
+        <img id="grass-three" src="grass two.png" alt="jpg">
+        <img id="grass-two" src="grass 1.png" alt="jpg">
+        <img id="grasses" src="grass two.png" alt="jpg">
+        <img id="grasses-one" src="grass two.png" alt="jpg">
+        <img id="ream" src="grass two.png" alt="jpg">
+        <img id="ream-one" src="grass two.png" alt="jpg">
+    </div>
+    
+    <div class="road">
+        <div class="lines-one"></div>
+        <div class="road-ground">
+ <img class="cars" src="car come.png" alt="jpg">
+            
+            <div class="cuted-line"></div>
+                 
+       
+    </div>
+    <div class="lines-two"></div>
+    </div>
+<style>
+    *{
+    background-color: #fff;
+    margin: 0%;
+    padding: 0%;
+}
+/* sky contains the two cloud */
+/* grass contain the side of the road */
+/* the road contains the lines, cr, and main road */
+.sky{
+    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+    background-color: skyblue;
+    width: 1355px;
+    height: 250px;
+}
+#img0{
+    background-color: skyblue;
+    margin-right:  260px;
+    margin-bottom: 100px;
+    animation-duration: 100s;
+    animation-name: cloud-one-moving;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+
+}
+#img1{
+    background-color: skyblue;
+    margin-right:  350px;
+    margin-bottom: 100px;
+    animation-duration: 100s;
+    animation-name: cloud-one-moving;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-fill-mode: initial;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+}
+.moon{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: yellow;
+    box-shadow: 
+    0px 0px 10px yellow;
+    position: fixed;
+}
+@keyframes cloud-one-moving{
+    from{
+        transform: translatex(0%);
+        filter: blur(1px);
+    }
+    to{
+        transform: translatex(700px);
+        filter: blur(5px);
+    }
+}
+#img2{
+    background-color: skyblue;
+    margin-bottom: 50px;
+    animation-name: bluring;
+    animation-delay: 1s;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+
+
+}
+@keyframes bluring {
+    0%{
+        
+        filter: blur(1px);
+    }
+    20%{
+        filter: blur(2px);
+    }
+    30%{
+        filter: blur(4px);
+    }
+    50%{
+        filter: blur(6px);
+    }
+    60%{
+        filter: blur(8px);
+    }
+    70%{
+        filter: blur(10px);
+    }
+    80%{
+        filter: blur(14px);
+    }
+    85%{
+        filter: blur(17px);
+    }
+    95%{
+        filter: blur(17px);
+    }
+    100%{
+        filter: blur(18px);
+    }
+}
+
+.cloud-2{
+    width: 1350px;
+    height: 170px;
+}
+.grass{
+    background-color: green;
+    height: 200px;
+    width: 1355px;
+    position: relative;
+}
+#grass-one{
+    background-color: green;
+    width: 70px;
+    height: 100px;
+    /* margin-left: 100px; */
+    position: inherit;
+    margin-bottom: 150px;
+
+}
+#grasses{
+   margin-bottom: 180px;
+   height: 100px;
+   width: 70px;
+   margin-left: 30px;
+   background-color: green;
+}
+#grasses-one{
+    margin-bottom: 220px;
+    height: 100px;
+    width: 70px;
+    margin-left: 50px;
+    background-color: green;
+ }
+ #grasses-two{
+    margin-bottom: 220px;
+    height: 100px;
+    width: 70px;
+    background-color: green;
+ }
+ #grasses-three{
+    margin-bottom: 180px;
+    height: 100px;
+    width: 70px;
+    background-color: green;
+ }
+ #grasses-four{
+    margin-bottom: 280px;
+    height: 100px;
+    width: 70px;
+    background-color: green;
+ }
+#grass22{
+   width: 80px;
+   height: 70px;
+   margin-bottom: 150px;
+   background-color: green;
+}
+#grass-two{
+    background-color: green;
+    width: 70px;
+    height: 100px;
+    position: inherit;
+    margin-bottom: 180px;
+}
+#grass-three{
+    background-color: green;
+    width: 100px;
+    height: 140px;
+    position: inherit;
+    margin-bottom: 180px;
+    margin-left: 200px;
+}
+#ream{
+    background-color: green;
+    width: 100px;
+    height: 140px;
+    position: inherit;
+    margin-bottom: 180px;
+   
+}
+#ream-one{
+    background-color: green;
+    width: 70px;
+    height: 110px;
+    position: inherit;
+    margin-bottom: 250px;
+    margin-left: 100px;
+   
+}
+.group{
+    margin: 0%;
+    padding: 0%;
+    
+}
+.lines-one{
+    height: 1.5px;
+    width: 1355px;
+    background-color: black;
+}
+.road-ground{
+    background-color: rgb(66, 65, 65);
+    width: 1355px;
+    height: 196px;
+    position: fixed;
+
+}
+.lines-two{
+    height: 4px;
+    width: 1355px;
+    background-color: black;
+}
+.cuted-line{
+    height: 4px;
+    width: 1355px;
+    background-color: rgb(201, 196, 196);
+    position: inherit;
+    margin-bottom: 150px;
+}
+
+#car{
+    width: 100px;
+    height: 80px;
+    margin-top: 30px;
+    background-color: rgb(66, 65, 65);
+}
+ .cars{
+    width: 240px;
+    height: 150px;
+    background-color: rgb(66, 65, 65);
+    animation-name: driving;
+
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+ }
+ .cars:hover{
+    animation-play-state: paused;
+    transition: 1.5s;
+    animation-play-state: paused;
+ }
+ @keyframes driving{
+    from{
+        transform: translatex(0%);
+        
+    }
+    to{
+        transform: translatex(1500px);
+        
+    }
+}
+</style>
+
+</body>
+</html>
